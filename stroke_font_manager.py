@@ -8,7 +8,7 @@
 # License: MIT
 #
 # Not yet pep8 compliant
-
+import random
 import os, re, sys
 from xml.dom.minidom import parse, Document, getDOMImplementation
 
@@ -220,7 +220,7 @@ class FontData:
 class DrawContext:
 
     #bottomToTop flag indicates y increases from bottom towards top (e.g. in Blender)
-    def __init__(self, parentPath, fontName, fontSize, charSpacing, wordSpacing,
+    def __init__(self, parentPath, fontName, fontName2, fontName3, fontName4, fontSize, charSpacing, wordSpacing,
                  lineSpacing, charDataFactory, renderer, bottomToTop = False):
         self.charSpacing = charSpacing
         self.lineSpacing = lineSpacing
@@ -228,16 +228,35 @@ class DrawContext:
         self.bottomToTop = bottomToTop
         self.yCoeff = -1 if(bottomToTop) else 1
 
+        #GET 4 FONTS
         self.strokeFontData = FontData(parentPath, fontName, fontSize, charDataFactory)
+        self.strokeFontData2 = FontData(parentPath, fontName2, fontSize, charDataFactory)
+        self.strokeFontData3 = FontData(parentPath, fontName3, fontSize, charDataFactory)
+        self.strokeFontData4 = FontData(parentPath, fontName4, fontSize, charDataFactory)
 
         self.spaceWidth = self.strokeFontData.spaceWidth * wordSpacing
-        self.lineHeight = fontSize * lineSpacing
+        randLineSpacing = random.randint(0, 2);
+        if (randLineSpacing == 0):
+            self.lineHeight = fontSize * (lineSpacing-0.2)
+        elif(randLineSpacing == 1):
+            self.lineHeight = fontSize * lineSpacing
+        elif (randLineSpacing == 2):
+            self.lineHeight = fontSize * (lineSpacing+0.1)
+        
 
     def fontHasGlyphs(self):
         return self.strokeFontData.hasGlyphs()
 
     def getCharData(self, char):
-        cd = self.strokeFontData.glyphMap.get(char)
+        chance = random.randint(0, 3)
+        if (chance == 0):
+            cd = self.strokeFontData.glyphMap.get(char)
+        elif (chance == 1):
+            cd = self.strokeFontData2.glyphMap.get(char)
+        elif (chance == 2):
+            cd = self.strokeFontData3.glyphMap.get(char)
+        elif (chance == 3):
+            cd = self.strokeFontData4.glyphMap.get(char)
 
         if(cd is None):
             naMargin = self.strokeFontData.fontSize * .1
@@ -548,7 +567,7 @@ class DrawContext:
         return yTextBottom, None
 
     def renderCharsWithoutBox(self, chars):
-
+        
         if(chars is None or len(chars) == 0):
             return
 
@@ -569,7 +588,7 @@ class DrawContext:
             for r in res:
                 wordData = [self.getCharData(cd) for cd in r[1]]
                 spaceWordData.append([len(r[0]), wordData])
-
+            
             xr = self.drawWordLine(
                 spaceWordData, x, y, xRight, alignment='left')
 

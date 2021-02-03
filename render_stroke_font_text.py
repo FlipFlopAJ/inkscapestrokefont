@@ -58,6 +58,13 @@ class InkscapeFontRenderer:
             
         d = getTranslatedPath(d, x, y)
             
+
+    def renderChar(self, charData, x, y, naChar):
+        d =  charData.pathStr        
+        style = getCharStyle(self.strokeWidth, naChar)
+            
+        d = getTranslatedPath(d, x, y)
+            
         attribs = {'style':formatStyle(style), 'd':d}
         getEtree().SubElement(self.currG, addNS('path','svg'), attribs) 
         
@@ -138,6 +145,15 @@ class RenderStrokeFontText(Effect):
         addFn( '--fontName', action = 'store', type = typeString, dest = 'fontName', \
             default = 'Script',  help = 'The custom font to be used for rendering')
 
+        addFn( '--fontName2', action = 'store', type = typeString, dest = 'fontName2', \
+            default = 'Script',  help = 'The custom font to be used for rendering 2')
+
+        addFn( '--fontName3', action = 'store', type = typeString, dest = 'fontName3', \
+            default = 'Script',  help = 'The custom font to be used for rendering 3')
+
+        addFn( '--fontName4', action = 'store', type = typeString, dest = 'fontName4', \
+            default = 'Script',  help = 'The custom font to be used for rendering 4')
+
         addFn('--fontSize', action = 'store', type = typeFloat, dest = 'fontSize', \
             default = '100', help = 'Size of the font')
 
@@ -170,6 +186,9 @@ class RenderStrokeFontText(Effect):
 
     def effect(self):
         fontName = self.options.fontName
+        fontName2 = self.options.fontName2
+        fontName3 = self.options.fontName3
+        fontName4 = self.options.fontName4
         fontSize = self.options.fontSize
         filePath = self.options.filePath
         action = self.options.action
@@ -201,7 +220,7 @@ class RenderStrokeFontText(Effect):
         layer = getCurrentLayer(self)
         renderer = InkscapeFontRenderer(layer, getViewCenter(self), strokeWidth)
 
-        context = DrawContext(extPath, fontName, fontSize, \
+        context = DrawContext(extPath, fontName, fontName2, fontName3, fontName4, fontSize, \
             charSpacing, wordSpacing, lineSpacing, InkscapeCharDataFactory(), renderer) 
             
         if(not context.fontHasGlyphs()): 
