@@ -18,18 +18,9 @@
 
       <param name="fontName" type="enum" _gui-text="Font:">
       <!-- ##! dynamically generated portion [start] -->
-          <item value="cncfont1">cncfont1</item>
-          <item value="cncfont1.2">cncfont1.2</item>
-          <item value="cncfont1.3">cncfont1.3</item>
-          <item value="cncfont1.4">cncfont1.4</item>
-          <item value="cncfont1.5">cncfont1.5</item>
-          <item value="cncfont1.6">cncfont1.6</item>
           <item value="Custom-Script">Custom-Script</item>
           <item value="Custom-Square Italic">Custom-Square Italic</item>
           <item value="Custom-Square Normal">Custom-Square Normal</item>
-          <item value="firstFontTester">firstFontTester</item>
-          <item value="firstFontTester2">firstFontTester2</item>
-          <item value="firstFontTesterDiacritice">firstFontTesterDiacritice</item>
           <item value="Hershey-Astrology">Hershey-Astrology</item>
           <item value="Hershey-Cyrillic">Hershey-Cyrillic</item>
           <item value="Hershey-Gothic English">Hershey-Gothic English</item>
@@ -53,23 +44,13 @@
           <item value="Hershey-Serif medium">Hershey-Serif medium</item>
           <item value="Hershey-Serif medium italic">Hershey-Serif medium italic</item>
           <item value="Hershey-Symbolic">Hershey-Symbolic</item>
-          <item value="testplotterfont">testplotterfont</item>
       <!-- ##! dynamically generated portion [end] -->
       </param>      
       <param name="fontName2" type="enum" _gui-text="Font2:">
       <!-- ##! dynamically generated portion [start] -->
-          <item value="cncfont1">cncfont1</item>
-          <item value="cncfont1.2">cncfont1.2</item>
-          <item value="cncfont1.3">cncfont1.3</item>
-          <item value="cncfont1.4">cncfont1.4</item>
-          <item value="cncfont1.5">cncfont1.5</item>
-          <item value="cncfont1.6">cncfont1.6</item>
           <item value="Custom-Script">Custom-Script</item>
           <item value="Custom-Square Italic">Custom-Square Italic</item>
           <item value="Custom-Square Normal">Custom-Square Normal</item>
-          <item value="firstFontTester">firstFontTester</item>
-          <item value="firstFontTester2">firstFontTester2</item>
-          <item value="firstFontTesterDiacritice">firstFontTesterDiacritice</item>
           <item value="Hershey-Astrology">Hershey-Astrology</item>
           <item value="Hershey-Cyrillic">Hershey-Cyrillic</item>
           <item value="Hershey-Gothic English">Hershey-Gothic English</item>
@@ -93,23 +74,13 @@
           <item value="Hershey-Serif medium">Hershey-Serif medium</item>
           <item value="Hershey-Serif medium italic">Hershey-Serif medium italic</item>
           <item value="Hershey-Symbolic">Hershey-Symbolic</item>
-          <item value="testplotterfont">testplotterfont</item>
       <!-- ##! dynamically generated portion [end] -->
       </param>     
       <param name="fontName3" type="enum" _gui-text="Font3:">
       <!-- ##! dynamically generated portion [start] -->
-          <item value="cncfont1">cncfont1</item>
-          <item value="cncfont1.2">cncfont1.2</item>
-          <item value="cncfont1.3">cncfont1.3</item>
-          <item value="cncfont1.4">cncfont1.4</item>
-          <item value="cncfont1.5">cncfont1.5</item>
-          <item value="cncfont1.6">cncfont1.6</item>
           <item value="Custom-Script">Custom-Script</item>
           <item value="Custom-Square Italic">Custom-Square Italic</item>
           <item value="Custom-Square Normal">Custom-Square Normal</item>
-          <item value="firstFontTester">firstFontTester</item>
-          <item value="firstFontTester2">firstFontTester2</item>
-          <item value="firstFontTesterDiacritice">firstFontTesterDiacritice</item>
           <item value="Hershey-Astrology">Hershey-Astrology</item>
           <item value="Hershey-Cyrillic">Hershey-Cyrillic</item>
           <item value="Hershey-Gothic English">Hershey-Gothic English</item>
@@ -133,23 +104,13 @@
           <item value="Hershey-Serif medium">Hershey-Serif medium</item>
           <item value="Hershey-Serif medium italic">Hershey-Serif medium italic</item>
           <item value="Hershey-Symbolic">Hershey-Symbolic</item>
-          <item value="testplotterfont">testplotterfont</item>
       <!-- ##! dynamically generated portion [end] -->
       </param> 
       <param name="fontName4" type="enum" _gui-text="Font4:">
       <!-- ##! dynamically generated portion [start] -->
-          <item value="cncfont1">cncfont1</item>
-          <item value="cncfont1.2">cncfont1.2</item>
-          <item value="cncfont1.3">cncfont1.3</item>
-          <item value="cncfont1.4">cncfont1.4</item>
-          <item value="cncfont1.5">cncfont1.5</item>
-          <item value="cncfont1.6">cncfont1.6</item>
           <item value="Custom-Script">Custom-Script</item>
           <item value="Custom-Square Italic">Custom-Square Italic</item>
           <item value="Custom-Square Normal">Custom-Square Normal</item>
-          <item value="firstFontTester">firstFontTester</item>
-          <item value="firstFontTester2">firstFontTester2</item>
-          <item value="firstFontTesterDiacritice">firstFontTesterDiacritice</item>
           <item value="Hershey-Astrology">Hershey-Astrology</item>
           <item value="Hershey-Cyrillic">Hershey-Cyrillic</item>
           <item value="Hershey-Gothic English">Hershey-Gothic English</item>
@@ -173,7 +134,6 @@
           <item value="Hershey-Serif medium">Hershey-Serif medium</item>
           <item value="Hershey-Serif medium italic">Hershey-Serif medium italic</item>
           <item value="Hershey-Symbolic">Hershey-Symbolic</item>
-          <item value="testplotterfont">testplotterfont</item>
       <!-- ##! dynamically generated portion [end] -->
       </param> 
           
